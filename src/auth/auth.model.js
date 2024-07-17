@@ -66,14 +66,14 @@ const Auth = {
     const transporter = nodemailer.createTransport({
       service: 'Gmail',
       auth: {
-        user: 'jijinjebanesh@gmail.com',
-        pass: 'qdqv dwkg hqql qgsg',
+        user: 'it.santacruz24@gmail.com',
+        pass: 'hehr ixvo tyzc agcg',
       }
     });
 
     const sendEmail = (email, otp) => {
       const mailOptions = {
-        from: 'jijijebanesh@gmail.com',
+        from: 'it.santacruz24@gmail.com',
         to: 'jebaneshjijin@gmail.com',
         subject: 'Password Reset Request',
         text: `Dear User,
@@ -148,6 +148,7 @@ Zenanvibe Support Team`
       });
     });
   },
+
 
   generateJWT: (userId, email, name, role) => {
     const secretKey = process.env.JWT_SECRET;
