@@ -66,15 +66,15 @@ const Auth = {
     const transporter = nodemailer.createTransport({
       service: 'Gmail',
       auth: {
-        user: 'it.santacruz24@gmail.com',
-        pass: 'hehr ixvo tyzc agcg',
+        user: process.env.SENDER_EMAIL,
+        pass: process.env.SENDER_PASS,
       }
     });
 
     const sendEmail = (email, otp) => {
       const mailOptions = {
         from: 'it.santacruz24@gmail.com',
-        to: 'jebaneshjijin@gmail.com',
+        to: email,
         subject: 'Password Reset Request',
         text: `Dear User,
 
